@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+ 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Text";
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    background-color: #261C2D;
+    background-image: url(./images/pattern-hills.svg), url(./images/bg-stars.svg);
+    background-repeat: no-repeat;
+    background-size: 100rem;
+    background-position: bottom, top;
+}
+
+
+header  {
+    padding-top: 8rem;
+}
+
+header h1 {
+    color: #FFF;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 6.136px;
+    text-align: center;
+    
+}
+
+.timer {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-inline: auto;
+    margin-top: 3rem;
+    max-width: 30rem;
+}
+
+
+
+.time-container {
+    width: 6rem;
+}
+
+.title {
+    display:block;
+    text-align: center;
+    margin-top: 13px;
+    color: #8385A9;
+    font-size: 0.4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+.boxes {
+    border-radius: 4px;
+    overflow:hidden;
+    background-color: #000;
+    box-shadow:  0 7px 0px  #191A23;
+    position: relative;
+}
+
+
+.boxes::after, .boxes::before {
+    position: absolute;
+    background-color: #191A23;
+    width: 8%;
+    min-width: 6px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    top: 50%;
+    content: "";
+}
+
+.boxes::after {
+    right: 0%;
+    transform: translate(50%, -50%);
+}
+
+.boxes::before {
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.first-box {
+    background: #2a2f43;
+}
+
+.last-box {
+    background-color: #343650;
+    margin-top: 0.5px;
+}
+
+.first-box, .last-box {
+    width: 6rem;
+    height: 3rem;
+}
+
+
+.boxes h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 71px;
+    letter-spacing: -1.08px;
+    background: linear-gradient(to bottom, #d65070 50%, #ff7083 50%);
+    -webkit-background-clip: text;
+}
+
+
+.line {
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 0.25px);
+    width: 100%;
+    height: 0.5px;
+    opacity: 0.253;
+    background:  #000;
+    transform: translate(-50%);
+}
+
+main div h2 {
+    color: #FB5E84;
+    font-size: 3rem;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30rem;
+    gap: 2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    margin: 0;
+  }
+
+input {
+    text-align: end;
+    padding-right: 1rem;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+.launch-container {
+    margin-inline:auto;
+    max-width: 30rem;
+    text-align: center;
+}
+
+.launch, .stop {
+    cursor: pointer;
+    font-family: "Space Mono", monospace;
+    background-color: lightgreen;
+    margin-top: 1.5rem;
+    padding-block: 0.3rem;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 0.9rem;
+    border: none;
+}
+
+.stop {
+    background-color: red;
+}
+
